@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#9c27b0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Agencia de Vehículos - PaletoRP</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="agencia.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="PaletoRP Logo" class="logo">
+                <span class="logo-text">PaletoRP</span>
+            </a>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="normativas.html"><i class="fas fa-book"></i> Normativas</a></li>
+                <li><a href="beneficios.html"><i class="fas fa-star"></i> Beneficios</a></li>
+                <li><a href="agencia.html"><i class="fas fa-car"></i>Concesionario</a></li>
+                <li><a href="https://discord.gg/UBy2a7NtAb" class="nav-cta"><i class="fas fa-user-plus"></i> Unirse</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Botón de menú movido fuera del navbar -->
+    <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Contenido principal -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Agencia de <span class="title-accent">Vehículos</span></h2>
+            
+            <!-- Buscador y filtros -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchVehicles" placeholder="Buscar vehículos...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">Todos</button>
+                    <button class="filter-btn" data-category="baja">Gama Baja</button>
+                    <button class="filter-btn" data-category="media">Gama Media</button>
+                    <button class="filter-btn" data-category="alta">Gama Alta</button>
+                </div>
+            </div>
+            
+            <!-- Grid de vehículos -->
+            <div class="vehicles-grid" id="vehiclesGrid">
+                <!-- El contenido se cargará dinámicamente con JavaScript -->
+                <div class="loading-spinner">
+                    <i class="fas fa-circle-notch fa-spin"></i>
+                    <span>Cargando vehículos...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Scripts -->
+    <script src="navigation.js"></script>
+    <script src="agencia.js"></script>
+</body>
+</html>
